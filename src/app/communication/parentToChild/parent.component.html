@@ -1,0 +1,14 @@
+<h3 class="text-warning">
+  parent to Child Communication
+</h3>
+
+
+<h3 class="text-primary">Child to parent message:{{message}}</h3>
+
+<h3 class="text-danger">Child to parent Eventemitter:{{messageEventEmitted}}</h3>
+
+<app-child [childMessage]="parentMessage" (messageEvent)="receiveMessage($event)"></app-child>
+
+<app-sibling></app-sibling>
+
+<h3 class="text-muted">Message from sibling to parent :{{messageFromSibling}}</h3>
